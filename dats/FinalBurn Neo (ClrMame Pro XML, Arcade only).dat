@@ -42070,10 +42070,10 @@
 	</game>
 	<game name="doubled1" romof="neogeo" sourcefile="neogeo/d_neogeo.cpp">
 		<comment>Homebrew</comment>
-		<description>Double Dragon One (Beta2 Version)</description>
+		<description>Double Dragon One (Beta 3.2 Version)</description>
 		<year>2025</year>
 		<manufacturer>OzzyOuzo</manufacturer>
-		<rom name="doubled-p1.bin" size="1048576" crc="e7923280"/>
+		<rom name="doubled-p1.bin" size="1048576" crc="5991da92"/>
 		<rom name="doubled-p2.bin" size="4194304" crc="7e5ed6b8"/>
 		<rom name="doubled-s1.bin" size="131072" crc="714afb4b"/>
 		<rom name="doubled-c1.bin" size="16777216" crc="fd883db8"/>
@@ -148963,6 +148963,32 @@
 		<rom name="video_sound_rom_9_std.808.ic12" size="4096" crc="b82f4ddb"/>
 		<rom name="decoder_rom_4.3g" size="512" crc="e6631c23"/>
 		<rom name="decoder_rom_6.3c" size="512" crc="83faf25e"/>
+		<video type="raster" orientation="vertical" width="240" height="292" aspectx="3" aspecty="4"/>
+		<driver status="good"/>
+	</game>
+	<game name="sinistarsm25" cloneof="sinistar" romof="sinistar" sourcefile="pre90s/d_williams.cpp">
+		<comment>Hack, initial boot will black screen, hit reset to fix</comment>
+		<description>Sinistar (SynaMax 2025 difficulty/titlescreen hack)</description>
+		<year>2025</year>
+		<manufacturer>Williams</manufacturer>
+		<rom name="sinistar_rom_10-b_16-3004-62.4c.mod25" size="4096" crc="fbd8eaf5"/>
+		<rom name="sinistar_rom_11-b_16-3004-63.4a.mod25" size="4096" crc="bd8c4f3f"/>
+		<rom name="sinistar_rom_1-b_16-3004-53.1d" merge="sinistar_rom_1-b_16-3004-53.1d" size="4096" crc="f6f3a22c"/>
+		<rom name="sinistar_rom_2-b_16-3004-54.1c" merge="sinistar_rom_2-b_16-3004-54.1c" size="4096" crc="cab3185c"/>
+		<rom name="sinistar_rom_3-b_16-3004-55.1a.mod25" size="4096" crc="704ed653"/>
+		<rom name="sinistar_rom_4-b_16-3004-56.2d.mod25" size="4096" crc="421a47eb"/>
+		<rom name="sinistar_rom_5-b_16-3004-57.2c.mod25" size="4096" crc="81251407"/>
+		<rom name="sinistar_rom_6-b_16-3004-58.2a.mod25" size="4096" crc="3bc54ce4"/>
+		<rom name="sinistar_rom_7-b_16-3004-59.3d.mod25" size="4096" crc="e965401d"/>
+		<rom name="sinistar_rom_8-b_16-3004-60.3c.mod25" size="4096" crc="eec28cb8"/>
+		<rom name="sinistar_rom_9-b_16-3004-61.3a.mod25" size="4096" crc="551ba9d4"/>
+		<rom name="3004_speech_ic7_r1_16-3004-52.ic7" merge="3004_speech_ic7_r1_16-3004-52.ic7" size="4096" crc="e1019568"/>
+		<rom name="3004_speech_ic5_r1_16-3004-50.ic5" merge="3004_speech_ic5_r1_16-3004-50.ic5" size="4096" crc="cf3b5ffd"/>
+		<rom name="3004_speech_ic6_r1_16-3004-51.ic6" merge="3004_speech_ic6_r1_16-3004-51.ic6" size="4096" crc="ff8d2645"/>
+		<rom name="3004_speech_ic4_r1_16-3004-49.ic4" merge="3004_speech_ic4_r1_16-3004-49.ic4" size="4096" crc="4b56a626"/>
+		<rom name="video_sound_rom_9_std.808.ic12" merge="video_sound_rom_9_std.808.ic12" size="4096" crc="b82f4ddb"/>
+		<rom name="decoder_rom_4.3g" merge="decoder_rom_4.3g" size="512" crc="e6631c23"/>
+		<rom name="decoder_rom_6.3c" merge="decoder_rom_6.3c" size="512" crc="83faf25e"/>
 		<video type="raster" orientation="vertical" width="240" height="292" aspectx="3" aspecty="4"/>
 		<driver status="good"/>
 	</game>
