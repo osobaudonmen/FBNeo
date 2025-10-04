@@ -162,6 +162,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="satyrhell" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>A Satyr In Hell (HB)</description>
+		<year>2022</year>
+		<manufacturer>kakoeimon</manufacturer>
+		<rom name="A Satyr In Hell (2022)(kakoeimon).bin" size="655360" crc="f4148d5c"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="aaharima" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Aa Harimanada (Japan)</description>
 		<year>1993</year>
@@ -2185,6 +2194,15 @@
 		<year>2025</year>
 		<manufacturer>Yoni Arousement</manufacturer>
 		<rom name="Bishoujo Super Street Fighter II - Glamor Queen v2.9A (2025)(Yoni Arousement).bin" size="5242880" crc="ccd8889f"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="bjreborndemo" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Black Jewel Reborn (HB, Demo v2.11)</description>
+		<year>2022</year>
+		<manufacturer>PSCD Games</manufacturer>
+		<rom name="Black Jewel Reborn v2.11 (2022)(PSCD Games).bin" size="3407872" crc="0adee51c"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -5585,6 +5603,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="driftinrage" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Driftin Rage - Alpha Version v0.01a (HB)</description>
+		<year>2025</year>
+		<manufacturer>MXRETRODEV</manufacturer>
+		<rom name="Driftin Rage - Alpha Version v0.01a (HB).bin" size="2621440" crc="7319f173"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="dushenzhi" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Du Shen Zhi Meng Huan Poker (Taiwan) (Unl)</description>
 		<year>1995</year>
@@ -7610,6 +7637,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="genmtetris" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Genesis Megatetris (HB)</description>
+		<year>2023-25</year>
+		<manufacturer>Danisc23</manufacturer>
+		<rom name="Genesis Megatetris (2023-25)(Danisc23).bin" size="393216" crc="caf8c2dd"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="genghis2" sourcefile="megadrive/d_megadrive.cpp">
 		<description>Genghis Khan II: Clan of the Gray Wolf (USA)</description>
 		<year>1993</year>
@@ -9552,6 +9588,15 @@
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="jurl" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Jurl (HB, v1.0c)</description>
+		<year>2025</year>
+		<manufacturer>Tonsomo Entertainment</manufacturer>
+		<rom name="Jurl v1.0c (2025)(Tonsomo Entertainment).bin" size="393216" crc="a7a56b9b"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="jleagues" cloneof="jleague" romof="jleague" sourcefile="megadrive/d_megadrive.cpp">
 		<comment>Hack</comment>
 		<description>Justice League Task Force (Hack, Spanish)</description>
@@ -9673,6 +9718,15 @@
 		<year>1993</year>
 		<manufacturer>Electronic Arts Victor</manufacturer>
 		<rom name="Killing Game Show, The (Japan)(1993)(Electronic Arts Victor).bin" size="1048576" crc="b8e7668a"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="kingball" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>King &amp; Balloon (HB)</description>
+		<year>2025</year>
+		<manufacturer>abadede919302</manufacturer>
+		<rom name="King &amp; Balloon (2025)(abadede919302).bin" size="393216" crc="4e6b7134"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -11213,6 +11267,15 @@
 		<year>2016</year>
 		<manufacturer>The Mojon Twins</manufacturer>
 		<rom name="Mega Cheril Perils (2016)(The Mojon Twins).bin" size="2088832" crc="77afa0b1"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="megaflappy" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Homebrew</comment>
+		<description>Mega Flappy Sis (HB)</description>
+		<year>2016-18</year>
+		<manufacturer>Beetroot</manufacturer>
+		<rom name="Mega Flappy Sis (2016-18)(Beetroot).bin" size="478706" crc="d2ca75b7"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -13854,6 +13917,67 @@
 		<year>2018</year>
 		<manufacturer>Studio Vetea</manufacturer>
 		<rom name="Papi Commando Remix MD (2018)(Studio Vetea).bin" size="3698576" crc="d15c6391"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="papriumunlck" cloneof="paprium" romof="paprium" sampleof="paprium" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Hack, Homebrew, NB: at first boot hit 'reset' after selecting language.</comment>
+		<description>Paprium (Unlocked) (World) (HB, Hack)</description>
+		<year>2025</year>
+		<manufacturer>knightofthewind89</manufacturer>
+		<rom name="Paprium (unlocked)(World)(2025)(knightofthewind89).bin" size="8388608" crc="868dd234"/>
+		<sample name="01 Theme of Paprium" />
+		<sample name="02 90's Acid Dub Character Select" />
+		<sample name="03 Bone Crusher" />
+		<sample name="04 Drumbass Boss" />
+		<sample name="05 Asian Chill" />
+		<sample name="06 Techno Beats" />
+		<sample name="07 Cool Groove" />
+		<sample name="08 90's Dance" />
+		<sample name="09 Retro Beat" />
+		<sample name="10 Spiral" />
+		<sample name="11 Hardcore BP2" />
+		<sample name="12 Stage Clear" />
+		<sample name="13 Hard Rock" />
+		<sample name="14 Neon Rider" />
+		<sample name="15 Electro Acid Funk" />
+		<sample name="16 Jazzy Shuffle" />
+		<sample name="17 Indie Shuffle" />
+		<sample name="18 Slow Asian Beat" />
+		<sample name="19 Neo Metal" />
+		<sample name="20 Sadness" />
+		<sample name="21 Cyborg Invasion" />
+		<sample name="22 Hardcore BP1" />
+		<sample name="23 Continue" />
+		<sample name="24 Intro" />
+		<sample name="25 Indie Break Beat" />
+		<sample name="26 Club Shuffle" />
+		<sample name="27 Dark Rock" />
+		<sample name="28 Evolve" />
+		<sample name="29 Dark &amp; Power Mad" />
+		<sample name="30 Cyber Interlude" />
+		<sample name="31 Bad Dudes vs Paprium" />
+		<sample name="32 Summer Breeze" />
+		<sample name="33 Funk Enhanced Mix" />
+		<sample name="34 Transe" />
+		<sample name="35 Cyberpunk Funk" />
+		<sample name="36 Cyberpunk Ninja" />
+		<sample name="37 Urban" />
+		<sample name="38 Hardcore BP3" />
+		<sample name="39 Ending" />
+		<sample name="40 Score" />
+		<sample name="41 Game Over" />
+		<sample name="42 1988 Commercial" />
+		<sample name="43 Blade FM" />
+		<sample name="44 Dark Alley" />
+		<sample name="45 Dubstep Groove" />
+		<sample name="46 Gothic" />
+		<sample name="47 House" />
+		<sample name="48 Slow Mood" />
+		<sample name="49 Smooth Coords" />
+		<sample name="50 Tension" />
+		<sample name="51 Water" />
+		<sample name="52 Waterfront Beat" />
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -21637,6 +21761,15 @@
 		<year>199?</year>
 		<manufacturer>&lt;unknown&gt;</manufacturer>
 		<rom name="Transformers 3 (Russia)(Unl)(199x).bin" size="1117472" crc="8632246d"/>
+		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="traysias" cloneof="traysia" romof="traysia" sourcefile="megadrive/d_megadrive.cpp">
+		<comment>Hack</comment>
+		<description>Traysia (Hack, Spanish)</description>
+		<year>2025</year>
+		<manufacturer>Team Alacant</manufacturer>
+		<rom name="Traysia T-Spa (2025)(Team Alacant).bin" size="2097152" crc="f9170727"/>
 		<video type="raster" orientation="horizontal" width="320" height="224" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
