@@ -19,7 +19,6 @@
 #include <streams/file_stream.h>
 #include <string/stdstring.h>
 
-#define snprintf_nowarn(...) (snprintf(__VA_ARGS__) < 0 ? abort() : (void)0)
 #define PRINTF_BUFFER_SIZE 512
 
 #define STAT_NOFIND  0
@@ -211,11 +210,11 @@ INT32 CoreRomPathsLoad()
 	for (INT32 i = 0; i < DIRS_MAX; i++)
 		memset(CoreRomPaths[i], 0, MAX_PATH * sizeof(TCHAR));
 
-	snprintf(szConfig, MAX_PATH - 1, "%srom_path.opt", szAppPathDefPath);
+	snprintf_nowarn(szConfig, MAX_PATH - 1, "%srom_path.opt", szAppPathDefPath);
 
 	if (NULL == (h = fopen(szConfig, "rt"))) {
 		memset(szConfig, 0, MAX_PATH * sizeof(TCHAR));
-		snprintf(szConfig, MAX_PATH - 1, "%s%crom_path.opt", g_rom_dir, PATH_DEFAULT_SLASH_C());
+		snprintf_nowarn(szConfig, MAX_PATH - 1, "%s%crom_path.opt", g_rom_dir, PATH_DEFAULT_SLASH_C());
 
 		if (NULL == (h = fopen(szConfig, "rt")))
 			return 1;
@@ -501,13 +500,17 @@ extern unsigned int (__cdecl *BurnHighCol) (signed int r, signed int g, signed i
 
 void retro_get_system_info(struct retro_system_info *info)
 {
-	char *library_version = (char*)calloc(22, sizeof(char));
+	char *library_version = (char*)calloc(38, sizeof(char));
+
+#ifndef GIT_DATE
+#define GIT_DATE ""
+#endif
 
 #ifndef GIT_VERSION
 #define GIT_VERSION ""
 #endif
 
-	sprintf(library_version, "v%x.%x.%x.%02x %s", nBurnVer >> 20, (nBurnVer >> 16) & 0x0F, (nBurnVer >> 8) & 0xFF, nBurnVer & 0xFF, GIT_VERSION);
+	sprintf(library_version, "v%x.%x.%x.%02x %s %s", nBurnVer >> 20, (nBurnVer >> 16) & 0x0F, (nBurnVer >> 8) & 0xFF, nBurnVer & 0xFF, GIT_DATE, GIT_VERSION);
 
 	info->library_name = APP_TITLE;
 	info->library_version = strdup(library_version);
@@ -965,7 +968,7 @@ static void locate_archive(std::vector<located_archive>& pathList, const char* c
 		for (INT32 nType = 0; nType < TYPES_MAX; nType++)
 		{
 			memset(path, 0, sizeof(path));
-			snprintf(path, MAX_PATH - 1, "%s%c%s%c%s", g_rom_dir, PATH_DEFAULT_SLASH_C(), szTypeEnum[0][nType], PATH_DEFAULT_SLASH_C(), romName);
+			snprintf_nowarn(path, MAX_PATH - 1, "%s%c%s%c%s", g_rom_dir, PATH_DEFAULT_SLASH_C(), szTypeEnum[0][nType], PATH_DEFAULT_SLASH_C(), romName);
 			if (ZipOpen(path) == 0)
 			{
 				g_find_list_path.push_back(located_archive());
@@ -1001,7 +1004,7 @@ static void locate_archive(std::vector<located_archive>& pathList, const char* c
 		for (INT32 nType = 0; nType < TYPES_MAX; nType++)
 		{
 			memset(path, 0, sizeof(path));
-			snprintf(path, MAX_PATH, "%s%cfbneo%c%s%c%s", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), szTypeEnum[0][nType], PATH_DEFAULT_SLASH_C(), romName);
+			snprintf_nowarn(path, MAX_PATH, "%s%cfbneo%c%s%c%s", g_system_dir, PATH_DEFAULT_SLASH_C(), PATH_DEFAULT_SLASH_C(), szTypeEnum[0][nType], PATH_DEFAULT_SLASH_C(), romName);
 			if (ZipOpen(path) == 0)
 			{
 				g_find_list_path.push_back(located_archive());
@@ -1042,7 +1045,7 @@ static void locate_archive(std::vector<located_archive>& pathList, const char* c
 
 			// custom_dir/romName
 			memset(path, 0, sizeof(path));
-			snprintf(path, MAX_PATH-1,"%s%c%s", CoreRomPaths[i], PATH_DEFAULT_SLASH_C(), romName);
+			snprintf_nowarn(path, MAX_PATH-1,"%s%c%s", CoreRomPaths[i], PATH_DEFAULT_SLASH_C(), romName);
 			if (ZipOpen(path) == 0)
 			{
 				g_find_list_path.push_back(located_archive());
@@ -1061,7 +1064,7 @@ static void locate_archive(std::vector<located_archive>& pathList, const char* c
 			for (INT32 nType = 0; nType < TYPES_MAX; nType++)
 			{
 				memset(path, 0, sizeof(path));
-				snprintf(path, MAX_PATH - 1, "%s%c%s%c%s", CoreRomPaths[i], PATH_DEFAULT_SLASH_C(), szTypeEnum[0][nType], PATH_DEFAULT_SLASH_C(), romName);
+				snprintf_nowarn(path, MAX_PATH - 1, "%s%c%s%c%s", CoreRomPaths[i], PATH_DEFAULT_SLASH_C(), szTypeEnum[0][nType], PATH_DEFAULT_SLASH_C(), romName);
 				if (ZipOpen(path) == 0)
 				{
 					g_find_list_path.push_back(located_archive());
@@ -1573,6 +1576,8 @@ void retro_run()
 	{
 		UINT32 old_nVerticalMode = nVerticalMode;
 		UINT32 old_nFrameskipType = nFrameskipType;
+		UINT32 old_nNewWidth = nNewWidth;
+		UINT32 old_nNewHeight = nNewHeight;
 
 		check_variables();
 
@@ -1586,6 +1591,12 @@ void retro_run()
 			struct retro_system_av_info av_info;
 			retro_get_system_av_info(&av_info);
 			environ_cb(RETRO_ENVIRONMENT_SET_GEOMETRY, &av_info);
+		}
+
+		// change resolution
+		if (old_nNewWidth != nNewWidth && old_nNewHeight != nNewHeight)
+		{
+			BurnSetResolution(nNewWidth, nNewHeight);
 		}
 
 		if (old_nFrameskipType != nFrameskipType)
@@ -1746,7 +1757,10 @@ static void extract_basename(char *buf, const char *path, size_t size, char *pre
 
 static void extract_directory(char *buf, const char *path, size_t size)
 {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wstringop-truncation"
 	strncpy(buf, path, size - 1);
+#pragma GCC diagnostic pop
 	buf[size - 1] = '\0';
 
 	char *base = strrchr(buf, PATH_DEFAULT_SLASH_C());
@@ -2204,6 +2218,7 @@ static bool retro_load_game_common()
 		// Initializing display, autorotate if needed
 		BurnDrvGetFullSize(&nGameWidth, &nGameHeight);
 		SetRotation();
+		BurnSetResolution(nNewWidth, nNewHeight);
 		SetColorDepth();
 
 		VideoBufferInit();

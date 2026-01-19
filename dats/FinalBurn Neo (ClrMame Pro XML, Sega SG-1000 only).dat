@@ -72,6 +72,15 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="astrododge" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>Astrododge (HB)</description>
+		<year>2012</year>
+		<manufacturer>Revival Studios</manufacturer>
+		<rom name="Astrododge (2012)(Revival Studios).sg" size="32768" crc="b895942d"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="bankp" sourcefile="sg1000/d_sg1000.cpp">
 		<description>Bank Panic (Japan)</description>
 		<year>1985</year>
@@ -226,7 +235,7 @@
 		<description>Chack'n Pop (Hack, English)</description>
 		<year>2010</year>
 		<manufacturer>goldenband</manufacturer>
-		<rom name="Chack'n Pop T-Eng (2010)(goldenband).bin" size="32768" crc="c106c923"/>
+		<rom name="Chack'n Pop T-Eng (2010)(goldenband).sg" size="32768" crc="c106c923"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -435,7 +444,7 @@
 		<description>Che-Man (HB)</description>
 		<year>2018</year>
 		<manufacturer>The Mojon Twins</manufacturer>
-		<rom name="Che-Man (2018)(The Mojon Twins).bin" size="49152" crc="477a5d75"/>
+		<rom name="Che-Man (2018)(The Mojon Twins).sg" size="49152" crc="477a5d75"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -444,7 +453,7 @@
 		<description>Cheril Perils Classic (HB)</description>
 		<year>2018</year>
 		<manufacturer>The Mojon Twins</manufacturer>
-		<rom name="Cheril Perils Classic (2018)(The Mojon Twins).bin" size="49152" crc="f87d6ef5"/>
+		<rom name="Cheril Perils Classic (2018)(The Mojon Twins).sg" size="49152" crc="f87d6ef5"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -968,6 +977,24 @@
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
+	<game name="impetus" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>Impetus (HB)</description>
+		<year>2022</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Impetus (2022)(Inufuto).sg" size="16624" crc="42179ce3"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="impetusplus" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>Impetus+ (HB)</description>
+		<year>2025</year>
+		<manufacturer>Inufuto</manufacturer>
+		<rom name="Impetus+ (2025)(Inufuto).sg" size="24576" crc="57f3ceec"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
 	<game name="jetpaco" sourcefile="sg1000/d_sg1000.cpp">
 		<comment>Homebrew</comment>
 		<description>Jet Paco and Jet Puri (HB)</description>
@@ -1212,7 +1239,7 @@
 		<description>Ninja Princess (Hack, English)</description>
 		<year>2010</year>
 		<manufacturer>goldenband</manufacturer>
-		<rom name="Ninja Princess T-Eng (2010)(goldenband).bin" size="32768" crc="bdb6cf0e"/>
+		<rom name="Ninja Princess T-Eng (2010)(goldenband).sg" size="32768" crc="bdb6cf0e"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1250,10 +1277,10 @@
 	</game>
 	<game name="ophibernplus" sourcefile="sg1000/d_sg1000.cpp">
 		<comment>Homebrew</comment>
-		<description>Operation Hibernation Plus (HB)</description>
+		<description>Operation Hibernation Plus (HB, Rev.2)</description>
 		<year>2025</year>
 		<manufacturer>Jess Creations - ArugulaZ</manufacturer>
-		<rom name="Operation Hibernation Plus (2025)(Jess Creations - ArugulaZ).sg" size="40960" crc="e530d8f5"/>
+		<rom name="Operation Hibernation Plus Rev.2 (2025)(Jess Creations - ArugulaZ).sg" size="49152" crc="d4b2189a"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1351,7 +1378,7 @@
 		<description>Pitfall II (Taiwan, Alt)</description>
 		<year>198?</year>
 		<manufacturer>Aaronix</manufacturer>
-		<rom name="Fa Gui Qibing - Pitfall II (Taiwan, Alt)(198?)(Aaronix).sg" size="32768" crc="4e93bc8e"/>
+		<rom name="Fa Gui Qibing - Pitfall II (Taiwan, Alt)(198x)(Aaronix).sg" size="32768" crc="4e93bc8e"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1400,7 +1427,7 @@
 		<description>Q*bert (Japan, OMV)</description>
 		<year>1983</year>
 		<manufacturer>Tsukuda Original</manufacturer>
-		<rom name="Q*bert (Japan, OMV)(1983)(Tsukuda Original).sg" size="8192" crc="77db4704"/>
+		<rom name="Q-bert (Japan, OMV)(1983)(Tsukuda Original).sg" size="8192" crc="77db4704"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1433,6 +1460,15 @@
 		<year>198?</year>
 		<manufacturer>&lt;unknown&gt;</manufacturer>
 		<rom name="Renzhe Gongzhu (Taiwan)(198x).sg" size="32768" crc="464d144b"/>
+		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
+		<driver status="good"/>
+	</game>
+	<game name="retropipe" sourcefile="sg1000/d_sg1000.cpp">
+		<comment>Homebrew</comment>
+		<description>RetroPIPE (HB, v0.2)</description>
+		<year>2025</year>
+		<manufacturer>Visrealm</manufacturer>
+		<rom name="RetroPIPE v0.2 (2025)(Visrealm).sg" size="32768" crc="3885a1f3"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
@@ -1558,10 +1594,10 @@
 	</game>
 	<game name="sgthelmet" sourcefile="sg1000/d_sg1000.cpp">
 		<comment>Homebrew</comment>
-		<description>Sgt. Helmet - Training Day (HB)</description>
+		<description>Sgt. Helmet: Training Day (HB)</description>
 		<year>2018</year>
 		<manufacturer>The Mojon Twins</manufacturer>
-		<rom name="Sgt. Helmet - Training Day (2018)(The Mojon Twins).bin" size="49152" crc="27c065a5"/>
+		<rom name="Sgt. Helmet - Training Day (2018)(The Mojon Twins).sg" size="49152" crc="27c065a5"/>
 		<video type="raster" orientation="horizontal" width="272" height="228" aspectx="4" aspecty="3"/>
 		<driver status="good"/>
 	</game>
